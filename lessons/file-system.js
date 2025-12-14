@@ -2,8 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const dotenv = require("dotenv");
 // require("dotenv").config({ override: true });
-dotenv.config();
-console.log(process.env);
+// dotenv.config();
+// console.log(process.env);
 
 // console.log("START");
 
@@ -111,12 +111,12 @@ const removeFileAsync = async (path) => {
 
 const text = process.env.TEXT || "";
 
-writeFileAsync(path.resolve(__dirname, "text.txt"), text)
-  .then(() => readFileAsync(path.resolve(__dirname, "text.txt")))
-  .then((data) => data.split(" ").length)
-  .then((count) =>
-    writeFileAsync(
-      path.resolve(__dirname, "count.txt"),
-      `Count of reading words ${count}`
-    )
-  );
+// writeFileAsync(path.resolve(__dirname, "text.txt"), text)
+//   .then(() => readFileAsync(path.resolve(__dirname, "text.txt")))
+//   .then((data) => data.split(" ").length)
+//   .then((count) =>
+//     writeFileAsync(
+//       path.resolve(__dirname, "count.txt"),
+//       `Count of reading words ${count}`
+//     ).then(() => removeFileAsync(path.resolve(__dirname, "text.txt")))
+//   );
