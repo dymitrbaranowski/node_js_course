@@ -16,8 +16,8 @@ const path = require("path");
 //Один чанк по дефолту 64кб
 
 // const stream = fs.createReadStream(
-//   path.resolve(__dirname, "test.txt"),
-//   "utf-8"
+//   path.resolve(__dirname, "test.txt")
+//   // "utf-8"
 // );
 // stream.on("data", (chunk) => {
 //   console.log(chunk);
@@ -37,11 +37,11 @@ const path = require("path");
 // }
 
 // writableStrim.end();
-// writableStrim.closed()
-// writableStrim.destroyed()
-// writableStrim.on('error')
+// writableStrim.closed();
+// writableStrim.destroyed();
+// writableStrim.on("error");
 
-const http = require("http");
+// const http = require("http");
 
 // http.createServer((req, res) => {
 //   //req - readable straer
@@ -49,8 +49,8 @@ const http = require("http");
 //   const stream = fs.createWriteStream(path.resolve(__dirname, "test.txt"));
 
 //   //Стрим закончит читать раньше чем пользователь скачает
-//   // stream.on("data", (chunk) => res.write(chunk));
-//   // stream.on("end", (chunk) => res.end());
+//   stream.on("data", (chunk) => res.write(chunk));
+//   stream.on("end", (chunk) => res.end());
 
-//   // stream.pipe(res)
+//   stream.pipe(res);
 // });
